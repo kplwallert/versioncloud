@@ -43,18 +43,21 @@ hystrix:
     default:
       coreSize: 200
       maximumSize: 200
-      maxQueueSize: -1  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
+      queueSizeRejectionThreshold: 100
+      maxQueueSize: 100  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
   command:
     default:
       execution:
+        timeout:
+          enabled: false
         isolation:
-          semaphore:
-            maxConcurrentRequests: 100
           thread:
-            timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
-ribbon:  
-  ReadTimeout: 60000  
-  ConnectTimeout: 60000
+            timeoutInMilliseconds: 2000000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+ribbon:
+  IsSecured: true
+  ReadTimeout: 2000000
+  ConnectTimeout: 2000000
+  maxAutoRetries: 3
 
 ---
 server:
