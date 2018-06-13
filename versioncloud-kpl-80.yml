@@ -12,7 +12,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
     instance-id: versioncloud-kpl-80
     prefer-ip-address: true     #访问路径可以显示IP地址  
@@ -38,7 +38,7 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000 
+            timeoutInMilliseconds: 10000 
 ---
 server:
   port: 80

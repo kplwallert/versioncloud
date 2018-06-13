@@ -14,7 +14,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
     instance-id: versioncloud-hystrix-dashbroad-9001
     prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址

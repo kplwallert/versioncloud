@@ -25,8 +25,6 @@ spring:
 #        initial-size: 5                                       # 初始化连接数
 #        max-total: 5                                          # 最大连接数
 #        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
-
-
 server:
   port: 7081
   tomcat:
@@ -36,7 +34,7 @@ server:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
     instance-id: versioncloud-search-admin7081
     prefer-ip-address: true     #访问路径可以显示IP地址  
@@ -53,7 +51,7 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 10000
 ---
 spring:
   profiles: dev7081
