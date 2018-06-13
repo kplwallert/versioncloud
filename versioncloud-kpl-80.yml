@@ -41,21 +41,20 @@ zuul:
 hystrix:
   threadpool:
     default:
-      coreSize: 30
-      maximumSize: 30
+      coreSize: 200
+      maximumSize: 200
       maxQueueSize: -1  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
   command:
     default:
       execution:
         isolation:
           semaphore:
-            maxConcurrentRequests: 50
+            maxConcurrentRequests: 100
           thread:
             timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
-      fallback:
-        isolation:
-          semaphore:
-            maxConcurrentRequests: 40
+ribbon:  
+  ReadTimeout: 10000  
+  ConnectTimeout: 10000
 
 ---
 server:
