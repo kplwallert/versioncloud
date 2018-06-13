@@ -1,0 +1,92 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 9001
+
+spring:
+  profiles: dev
+  application:
+    name: versioncloud-hystrix-dashbroad
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+  instance:
+    instance-id: versioncloud-hystrix-dashbroad-9001
+    prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址
+ 
+info:
+   app.name: versioncloud-hystrix-dashbroad-9001
+   company.name: www.lian2345.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+---
+server:
+  port: 9001
+
+spring:
+  profiles: dev9001
+  application:
+    name: versioncloud-hystrix-dashbroad
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+  instance:
+    instance-id: versioncloud-hystrix-dashbroad-9001
+    prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址
+ 
+info:
+   app.name: versioncloud-hystrix-dashbroad-9001
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+---
+server:
+  port: 9002
+
+spring:
+  profiles: dev9002
+  application:
+    name: versioncloud-hystrix-dashbroad
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+  instance:
+    instance-id: versioncloud-hystrix-dashbroad-9002
+    prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址
+ 
+info:
+   app.name: versioncloud-hystrix-dashbroad-9002
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+---
+server:
+  port: 9001
+
+spring:
+  profiles: test
+  application:
+    name: versioncloud-hystrix-dashbroad
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
+  instance:
+    instance-id: versioncloud-hystrix-dashbroad-9001-test
+    prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址
+ 
+info:
+   app.name: versioncloud-hystrix-dashbroad-9001-test
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$

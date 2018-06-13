@@ -1,4 +1,4 @@
-ï»¿spring:
+spring:
   profiles:
     active:
     - dev
@@ -11,36 +11,36 @@ spring:
   application:
     name:  versioncloud-5555-hystrix-config-task
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&autoReconnect=true        # æ•°æ®åº“åç§°
+    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false     # Êı¾İ¿âÃû³Æ
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
-      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
-      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
-      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
+      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
+      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
+      max-total: 500                                          # ×î´óÁ¬½ÓÊı
+      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
   jpa:
     hibernate:
-#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
+#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
       ddl-auto: update
-#    æ§åˆ¶å°æ˜¾ç¤ºSQL
+#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
     show-sql: false
-    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
+    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
   instance:
-    instance-id: versioncloud-5555-hystrix-config-task
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    instance-id: versioncloud-5555-hystrix-config-task-5555
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
    app.name: versioncloud-provieder-task
-   company.name: www.kpl.com
+   company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 ---
@@ -52,31 +52,31 @@ spring:
   application:
     name:  versioncloud-5555-hystrix-config-task
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&autoReconnect=true        # æ•°æ®åº“åç§°
+    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false       # Êı¾İ¿âÃû³Æ
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
-      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
-      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
-      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
+      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
+      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
+      max-total: 500                                          # ×î´óÁ¬½ÓÊı
+      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
   jpa:
     hibernate:
-#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
+#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
       ddl-auto: update
-#    æ§åˆ¶å°æ˜¾ç¤ºSQL
+#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
     show-sql: false
-    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
+    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
-    instance-id: versioncloud-5555-hystrix-config-task
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    instance-id: versioncloud-5555-hystrix-config-task-5555
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -93,31 +93,31 @@ spring:
   application:
     name:  versioncloud-5555-hystrix-config-task
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&autoReconnect=true        # æ•°æ®åº“åç§°
+    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false       # Êı¾İ¿âÃû³Æ
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
-      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
-      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
-      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
+      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
+      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
+      max-total: 500                                          # ×î´óÁ¬½ÓÊı
+      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
   jpa:
     hibernate:
-#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
+#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
       ddl-auto: update
-#    æ§åˆ¶å°æ˜¾ç¤ºSQL
+#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
     show-sql: false
-    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
+    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
-    instance-id: versioncloud-5555-hystrix-config-task
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    instance-id: versioncloud-5555-hystrix-config-task-5554
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -126,3 +126,43 @@ info:
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 ---
+server:
+  port: 5555
+
+spring:
+  profiles: test
+  application:
+    name:  versioncloud-5555-hystrix-config-task
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false     # Êı¾İ¿âÃû³Æ
+    username: root
+    password: DaikuanTest888..
+    dbcp2:
+      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
+      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
+      max-total: 500                                          # ×î´óÁ¬½ÓÊı
+      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+  jpa:
+    hibernate:
+#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+      ddl-auto: update
+#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+    show-sql: false
+    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+eureka:
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+    service-url:
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
+  instance:
+    instance-id: versioncloud-5555-hystrix-config-task-5555-test
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    
+    
+info:
+   app.name: versioncloud-provieder-task-test
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$

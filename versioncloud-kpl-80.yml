@@ -1,0 +1,228 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 80
+spring:
+  profiles: dev
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-80
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-80
+   company.name: www.lian2345.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
+---
+server:
+  port: 80
+  
+spring:
+  profiles: dev80
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-80
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-80
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
+---
+server:
+  port: 81
+  
+spring:
+  profiles: dev81
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-81
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-81
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
+---
+server:
+  port: 80
+spring:
+  profiles: test
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-80-test
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-80-test
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
+            
+---
+server:
+  port: 80
+spring:
+  profiles: test01
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-80-test-01
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-80-test-01
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
+---
+server:
+  port: 80
+spring:
+  profiles: test02
+  application:
+    name:  versioncloud-kpl-80
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
+  instance:
+    instance-id: versioncloud-kpl-80-test-02
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-kpl-80-test-02
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+zuul:
+  ignored-services: "*"
+  routes: 
+     market.serviceId: versioncloud-kpl
+     market.path: /
+     mis.serviceId: versioncloud-other-mis
+     mis.path: /
+     search_admin.serviceId: versioncloud-search-admin
+     search_admin.path: /
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000 
