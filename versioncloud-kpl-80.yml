@@ -24,40 +24,21 @@ info:
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 zuul:
-  #host:
-   #  max-total-connections: 400 # 默认值
-    # max-per-route-connections: 40  #默认值
   ignored-services: "*"
-  routes:
+  routes: 
      market.serviceId: versioncloud-kpl
      market.path: /
      mis.serviceId: versioncloud-other-mis
      mis.path: /
      search_admin.serviceId: versioncloud-search-admin
      search_admin.path: /
-  #threadPool:
-   # useSeparateThreadPools: true  #每个路由是独立的线程池
-
-hystrix:
-  threadpool:
-    default:
-      coreSize: 200
-      maximumSize: 200
-      #queueSizeRejectionThreshold: 100
-      #maxQueueSize: 100  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false
-        isolation:
-          thread:
-            timeoutInMilliseconds: 120000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
-ribbon:
-  IsSecured: true
-  ReadTimeout: 120000
-  ConnectTimeout: 120000
- # maxAutoRetries: 2
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 10000 
 
 ---
 server:
