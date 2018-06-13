@@ -23,15 +23,26 @@ info:
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
+server:
+  tomcat:
+    accept-count: 600
+    max-connections: 600  #设置最大连接数
+    max-threads: 600      # // 设置最大线程数
 zuul:
+  host:
+     max-total-connections: 400 # 默认值
+     max-per-route-connections: 40  #默认值
   ignored-services: "*"
-  routes: 
+  routes:
      market.serviceId: versioncloud-kpl
      market.path: /
      mis.serviceId: versioncloud-other-mis
      mis.path: /
      search_admin.serviceId: versioncloud-search-admin
      search_admin.path: /
+  threadPool:
+    useSeparateThreadPools: true  #每个路由是独立的线程池
+
 ribbon:
   okhttp:
     enabled: true #开启重试机制，它默认是关闭
@@ -41,12 +52,24 @@ ribbon:
   maxAutoRetriesNextServer: 2  #切换实例的重试次数，建议设置为当前服务的实例数。但不建议设置太大
   okToRetryOnAllOperations: true #对所有操作请求都进行重试
 hystrix:
+  threadpool:
+    default:
+      coreSize: 30
+      maximumSize: 30
+      maxQueueSize: -1  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
   command:
     default:
       execution:
         isolation:
+          semaphore:
+            maxConcurrentRequests: 50
           thread:
-             timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+            timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 40
+
 ---
 server:
   port: 80
