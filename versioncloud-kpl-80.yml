@@ -1,4 +1,4 @@
-ï»¿spring:
+spring:
   profiles:
     active:
     - dev
@@ -10,12 +10,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
     instance-id: versioncloud-kpl-80
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -25,8 +25,8 @@ info:
    build.version: $project.version$
 zuul:
   host:
-     max-total-connections: 400 # é»˜è®¤å€¼
-     max-per-route-connections: 40  #é»˜è®¤å€¼
+     max-total-connections: 400 # Ä¬ÈÏÖµ
+     max-per-route-connections: 40  #Ä¬ÈÏÖµ
   ignored-services: "*"
   routes:
      market.serviceId: versioncloud-kpl
@@ -36,24 +36,24 @@ zuul:
      search_admin.serviceId: versioncloud-search-admin
      search_admin.path: /
   threadPool:
-    useSeparateThreadPools: true  #æ¯ä¸ªè·¯ç”±æ˜¯ç‹¬ç«‹çš„çº¿ç¨‹æ± 
+    useSeparateThreadPools: true  #Ã¿¸öÂ·ÓÉÊÇ¶ÀÁ¢µÄÏß³Ì³Ø
 
 hystrix:
   threadpool:
     default:
       coreSize: 200
       maximumSize: 200
-      maxQueueSize: -1  # å¦‚è¯¥å€¼ä¸º-1ï¼Œé‚£ä¹ˆä½¿ç”¨çš„æ˜¯SynchronousQueueï¼Œå¦åˆ™ä½¿ç”¨çš„æ˜¯LinkedBlockingQueue
+      maxQueueSize: -1  # Èç¸ÃÖµÎª-1£¬ÄÇÃ´Ê¹ÓÃµÄÊÇSynchronousQueue£¬·ñÔòÊ¹ÓÃµÄÊÇLinkedBlockingQueue
   command:
     default:
       execution:
         isolation:
           semaphore:
-            maxConcurrentRequests: 100
+            maxConcurrentRequests: 200
           thread:
-            timeoutInMilliseconds: 10000 #æ–­è·¯å™¨çš„è¶…æ—¶æ—¶é—´éœ€è¦å¤§äºribbonçš„è¶…æ—¶æ—¶é—´ï¼Œä¸ç„¶ä¸ä¼šè§¦å‘é‡è¯•ã€‚
+            timeoutInMilliseconds: 10000 #¶ÏÂ·Æ÷µÄ³¬Ê±Ê±¼äĞèÒª´óÓÚribbonµÄ³¬Ê±Ê±¼ä£¬²»È»²»»á´¥·¢ÖØÊÔ¡£
 ribbon:  
-  ReadTimeout: 10000  
+  ReadTimeout: 60000  
   ConnectTimeout: 10000
 
 ---
@@ -65,12 +65,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -103,12 +103,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-81
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -139,12 +139,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -177,12 +177,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-01
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
@@ -214,12 +214,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
     service-url:
       defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-02
-    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
+    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
     
     
 info:
