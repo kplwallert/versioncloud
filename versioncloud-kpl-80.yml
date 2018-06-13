@@ -54,7 +54,7 @@ hystrix:
             timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
 ribbon:  
   ReadTimeout: 60000  
-  ConnectTimeout: 10000
+  ConnectTimeout: 60000
 
 ---
 server:
