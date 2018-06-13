@@ -23,12 +23,6 @@ info:
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
-server:
-  tomcat:
-    accept-count: 600
-    max-connections: 600  #设置最大连接数
-    max-threads: 600      # // 设置最大线程数
-    port: 80
 zuul:
   host:
      max-total-connections: 400 # 默认值
@@ -44,14 +38,6 @@ zuul:
   threadPool:
     useSeparateThreadPools: true  #每个路由是独立的线程池
 
-ribbon:
-  okhttp:
-    enabled: true #开启重试机制，它默认是关闭
-  connectTimeout: 10000  #请求连接的超时时间
-  readTimeout: 10000  #请求处理的超时时间
-  maxAutoRetries: 1 #对当前实例的重试次数
-  maxAutoRetriesNextServer: 2  #切换实例的重试次数，建议设置为当前服务的实例数。但不建议设置太大
-  okToRetryOnAllOperations: true #对所有操作请求都进行重试
 hystrix:
   threadpool:
     default:
