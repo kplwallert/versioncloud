@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -12,16 +12,16 @@ spring:
     name: versioncloud-hystrix-dashbroad
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
   instance:
     instance-id: versioncloud-hystrix-dashbroad-9001
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿É127.0.0.1121212ÒÔÏÔÊ¾IPµØÖ·
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯127.0.0.1121212ä»¥æ˜¾ç¤ºIPåœ°å€
  
 info:
    app.name: versioncloud-hystrix-dashbroad-9001
-   company.name: www.lian2345.com
+   company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 ---
@@ -34,12 +34,12 @@ spring:
     name: versioncloud-hystrix-dashbroad
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-hystrix-dashbroad-9001
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿É127.0.0.1121212ÒÔÏÔÊ¾IPµØÖ·
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯127.0.0.1121212ä»¥æ˜¾ç¤ºIPåœ°å€
  
 info:
    app.name: versioncloud-hystrix-dashbroad-9001
@@ -56,12 +56,12 @@ spring:
     name: versioncloud-hystrix-dashbroad
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-hystrix-dashbroad-9002
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿É127.0.0.1121212ÒÔÏÔÊ¾IPµØÖ·
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯127.0.0.1121212ä»¥æ˜¾ç¤ºIPåœ°å€
  
 info:
    app.name: versioncloud-hystrix-dashbroad-9002
@@ -78,12 +78,12 @@ spring:
     name: versioncloud-hystrix-dashbroad
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-hystrix-dashbroad-9001-test
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿É127.0.0.1121212ÒÔÏÔÊ¾IPµØÖ·
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯127.0.0.1121212ä»¥æ˜¾ç¤ºIPåœ°å€
  
 info:
    app.name: versioncloud-hystrix-dashbroad-9001-test

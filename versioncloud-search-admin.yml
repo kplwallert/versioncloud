@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -14,17 +14,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -34,17 +34,17 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
   instance:
     instance-id: versioncloud-search-admin7081
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
    app.name: versioncloud-search-admin7081
-   company.name: www.lian2345.com
+   company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 hystrix:    
@@ -65,17 +65,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -85,12 +85,12 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-search-admin7081
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -116,17 +116,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -136,12 +136,12 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-search-admin7082
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -167,17 +167,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -187,12 +187,12 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-search-admin7082-test
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -218,17 +218,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -238,12 +238,12 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-search-admin7082-test-01
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -269,17 +269,17 @@ spring:
       - http://192.168.31.60:9200
       read-timeout: 5000
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    url: jdbc:mysql://192.168.31.150:3306/lian2345 # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
-#        min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-#        initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-#        max-total: 5                                          # ×î´óÁ¬½ÓÊı
-#        max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+#        min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+#        initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+#        max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+#        max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 server:
@@ -289,12 +289,12 @@ server:
     max-http-post-size: 102400
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
   instance:
     instance-id: versioncloud-search-admin7082-test-02
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:

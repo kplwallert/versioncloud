@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -10,17 +10,17 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-      defaultZone: http://www.lian2345.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
   instance:
     instance-id: versioncloud-kpl-80
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
    app.name: versioncloud-kpl-80
-   company.name: www.lian2345.com
+   company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 zuul:
@@ -48,12 +48,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -86,12 +86,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-81
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -122,12 +122,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -160,12 +160,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-01
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -197,12 +197,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-02
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
