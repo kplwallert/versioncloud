@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -11,31 +11,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false     # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false     # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex:7001/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5556
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -59,31 +59,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false       # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false       # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5556
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -107,31 +107,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5557
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -155,31 +155,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5557-test
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -203,31 +203,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5557-test-01
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -251,31 +251,31 @@ spring:
   application:
     name:  versioncloud-kpl
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.31.150:3306/lian2345?useSSL=false      # æ•°æ®åº“åç§°
     username: root
     password: DaikuanTest888..
     dbcp2:
-      min-idle: 50                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 50                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 500                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                  # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 50                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 50                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 500                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                  # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
   jpa:
     hibernate:
-#     ¸üĞÂ»òÕß´´½¨Êı¾İ±í½á¹¹
+#     æ›´æ–°æˆ–è€…åˆ›å»ºæ•°æ®è¡¨ç»“æ„
       ddl-auto: update
-#    ¿ØÖÆÌ¨ÏÔÊ¾SQL
+#    æ§åˆ¶å°æ˜¾ç¤ºSQL
     show-sql: false
-    #Êı¾İÔÚ5.7ÒÔÉÏ»á±¨´í
+    #æ•°æ®åœ¨5.7ä»¥ä¸Šä¼šæŠ¥é”™
     database-platform: org.hibernate.dialect.MySQL5Dialect
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
   instance:
     instance-id: versioncloud-reptile-market-config-5557-test-02
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
