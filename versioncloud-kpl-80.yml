@@ -28,6 +28,7 @@ server:
     accept-count: 600
     max-connections: 600  #设置最大连接数
     max-threads: 600      # // 设置最大线程数
+    port: 80
 zuul:
   host:
      max-total-connections: 400 # 默认值
