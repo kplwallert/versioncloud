@@ -24,9 +24,9 @@ info:
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 zuul:
-  host:
-     max-total-connections: 400 # 默认值
-     max-per-route-connections: 40  #默认值
+  #host:
+   #  max-total-connections: 400 # 默认值
+    # max-per-route-connections: 40  #默认值
   ignored-services: "*"
   routes:
      market.serviceId: versioncloud-kpl
@@ -44,7 +44,7 @@ hystrix:
       coreSize: 200
       maximumSize: 200
       queueSizeRejectionThreshold: 100
-      maxQueueSize: 100  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
+      #maxQueueSize: 100  # 如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue
   command:
     default:
       execution:
@@ -52,12 +52,12 @@ hystrix:
           enabled: false
         isolation:
           thread:
-            timeoutInMilliseconds: 2000000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+            timeoutInMilliseconds: 10000 #断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
 ribbon:
   IsSecured: true
   ReadTimeout: 2000000
   ConnectTimeout: 2000000
-  maxAutoRetries: 3
+  maxAutoRetries: 2
 
 ---
 server:
