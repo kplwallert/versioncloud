@@ -49,7 +49,10 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 15000
+            timeoutInMilliseconds: 10000
+ribbon:  
+  ReadTimeout: 10000  
+  ConnectTimeout: 10000
 ---
 server:
   port: 5556

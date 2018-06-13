@@ -20,17 +20,11 @@ spring:
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
-#      dbcp2:
-#        min-idle: 5                                           # 数据库连接池的最小维持连接数
-#        initial-size: 5                                       # 初始化连接数
-#        max-total: 5                                          # 最大连接数
-#        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
 server:
   port: 7081
   tomcat:
     uri-encoding: UTF-8
     max-http-post-size: 102400
-
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -52,6 +46,9 @@ hystrix:
         isolation:    
           thread:    
             timeoutInMilliseconds: 10000
+ribbon:  
+  ReadTimeout: 10000  
+  ConnectTimeout: 10000
 ---
 spring:
   profiles: dev7081
