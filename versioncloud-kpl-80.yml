@@ -26,7 +26,11 @@ info:
 zuul:
   ignored-services: "*"
  
-hystrix:    
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
   command:    
     default:    
       execution:    
@@ -63,7 +67,11 @@ info:
 zuul:
   ignored-services: "*"
  
-hystrix:    
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
   command:    
     default:    
       execution:    
