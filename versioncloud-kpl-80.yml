@@ -25,13 +25,7 @@ info:
    build.version: $project.version$
 zuul:
   ignored-services: "*"
-  routes: 
-     market.serviceId: versioncloud-kpl
-     market.path: /
-     mis.serviceId: versioncloud-other-mis
-     mis.path: /
-     search_admin.serviceId: versioncloud-search-admin
-     search_admin.path: /
+ 
 hystrix:    
   command:    
     default:    
