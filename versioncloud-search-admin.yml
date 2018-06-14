@@ -45,6 +45,54 @@ hystrix:
       execution:    
         isolation:    
           thread:    
+            timeoutInMilliseconds: 30000
+ribbon:  
+  ReadTimeout: 30000  
+  ConnectTimeout: 30000
+  
+---
+
+spring:
+  profiles: devkpl
+  application:
+    name:  versioncloud-search-admin
+  elasticsearch:
+    jest:
+      uris:
+      - http://192.168.31.60:9200
+      read-timeout: 5000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    url: jdbc:mysql://127.0.0.1:3306/lian2345 # 数据库名称
+    username: root
+    password: DaikuanTest888..
+    dbcp2:
+      driver-class-name: org.gjt.mm.mysql.Driver
+server:
+  port: 7082
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-post-size: 102400
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
+  instance:
+    instance-id: versioncloud-search-admin7082
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-search-admin7082
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
             timeoutInMilliseconds: 10000
 ribbon:  
   ReadTimeout: 10000  

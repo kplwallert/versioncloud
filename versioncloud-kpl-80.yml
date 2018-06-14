@@ -49,39 +49,37 @@ server:
   port: 80
   
 spring:
-  profiles: dev80
+  profiles: devkpl
   application:
     name:  versioncloud-kpl-80
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
-    instance-id: versioncloud-kpl-80
+    instance-id: versioncloud-kpl-80-11
     prefer-ip-address: true     #访问路径可以显示IP地址  
     
     
 info:
-   app.name: versioncloud-kpl-80
+   app.name: versioncloud-kpl-80-11
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 zuul:
   ignored-services: "*"
-  routes: 
-     market.serviceId: versioncloud-kpl
-     market.path: /
-     mis.serviceId: versioncloud-other-mis
-     mis.path: /
-     search_admin.serviceId: versioncloud-search-admin
-     search_admin.path: /
+ 
 hystrix:    
   command:    
     default:    
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000 
+            timeoutInMilliseconds: 20000 
+ribbon:
+     IsSecured: true
+     ReadTimeout: 20000
+     ConnectTimeout: 20000
 ---
 server:
   port: 81
@@ -193,7 +191,10 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000 
+            timeoutInMilliseconds: 30000
+ribbon:  
+  ReadTimeout: 30000  
+  ConnectTimeout: 30000
 ---
 server:
   port: 80
@@ -204,7 +205,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://192.168.31.225:7001/eureka/,http://192.168.31.225:7002/eureka/
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-02
     prefer-ip-address: true     #访问路径可以显示IP地址  
@@ -230,4 +231,4 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000 
+            timeoutInMilliseconds: 10000 

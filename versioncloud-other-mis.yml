@@ -88,10 +88,10 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 30000
 ribbon:  
-  ReadTimeout: 10000  
-  ConnectTimeout: 10000
+  ReadTimeout: 30000  
+  ConnectTimeout: 30000
 ---
 spring:
   profiles: devkpl
@@ -178,10 +178,10 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 30000
 ribbon:  
-  ReadTimeout: 10000  
-  ConnectTimeout: 10000
+  ReadTimeout: 30000  
+  ConnectTimeout: 30000
 ---
 spring:
   profiles: dev5659
@@ -531,7 +531,10 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 5000 
+            timeoutInMilliseconds: 30000
+ribbon:  
+  ReadTimeout: 30000  
+  ConnectTimeout: 30000
 ---
 spring:
   profiles: test02
