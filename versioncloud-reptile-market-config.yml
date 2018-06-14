@@ -32,7 +32,9 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+    healthcheck:
+      enabled: true
   instance:
     instance-id: versioncloud-reptile-market-config-5556
     prefer-ip-address: true     #访问路径可以显示IP地址  
@@ -43,16 +45,22 @@ info:
    company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
-hystrix:    
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
   command:    
     default:    
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 30000
-ribbon:  
-  ReadTimeout: 30000  
-  ConnectTimeout: 30000
+            timeoutInMilliseconds: 20000 
+ribbon:
+     IsSecured: true
+     ReadTimeout: 20000
+     ConnectTimeout: 20000
+
   
 ---
 server:
