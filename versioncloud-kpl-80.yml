@@ -300,6 +300,8 @@ hystrix:
           thread:    
             timeoutInMilliseconds: 30000 
 ribbon:
+  NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+  listOfServers: 39.108.159.21,192.168.31.158
   okhttp:
     enabled: true #开启重试机制，它默认是关闭
   ConnectTimeout: 30000  #请求连接的超时时间
