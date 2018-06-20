@@ -271,6 +271,9 @@ info:
    build.version: $project.version$
 zuul:
   ignored-services: "*"
+  routes:
+    market.serviceId: versioncloud-kpl
+    market.url: http://161.117.6.125:5556
  
 hystrix:
   threadpool:
