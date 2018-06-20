@@ -51,7 +51,6 @@ ribbon:
 server:
   port: 80
   
-  
 spring:
   profiles: devkpl
   application:
@@ -280,7 +279,7 @@ zuul:
   ignored-services: "*"
   routes:
     market.serviceId: versioncloud-kpl
-    #market.url: http://39.108.159.21:5556
+    market.url: http://39.108.159.21:5556,http://192.168.31.158:5557
     market.path: /market/api/**
     #mis.serviceId: versioncloud-other-mis
     #mis.url: http://39.108.159.21:5658
