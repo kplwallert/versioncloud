@@ -275,6 +275,12 @@ zuul:
     market.serviceId: versioncloud-kpl
     market.url: http://39.108.159.21:5556
     market.path: /**
+    mis.serviceId: versioncloud-other-mis
+    mis.url: http://39.108.159.21:5658
+    mis.path: /**
+    search.serviceId: versioncloud-search-admin
+    search.url: http://39.108.159.21:7081
+    search.path: /**
  
 hystrix:
   threadpool:
