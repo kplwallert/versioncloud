@@ -20,25 +20,32 @@ spring:
     password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
+#      dbcp2:
+#        min-idle: 5                                           # 数据库连接池的最小维持连接数
+#        initial-size: 5                                       # 初始化连接数
+#        max-total: 5                                          # 最大连接数
+#        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+
 server:
   port: 7081
-  tomcat:
-    uri-encoding: UTF-8
-    max-http-post-size: 102400
+  maxHttpHeaderSize: 102400
+  tomcat.uri-encoding: UTF-8
+#  tomcat:
+#    uri-encoding: UTF-8
+#    max-http-post-size: 102400
+
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
-    healthcheck:
-      enabled: true
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
-    instance-id: versioncloud-search-admin7081
+    instance-id: versioncloud-search-admin7082-dev
     prefer-ip-address: true     #访问路径可以显示IP地址  
-   
     
     
 info:
-   app.name: versioncloud-search-admin7081
+   app.name: versioncloud-search-admin7082-dev
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
@@ -48,11 +55,7 @@ hystrix:
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 30000
-ribbon:  
-  ReadTimeout: 30000  
-  ConnectTimeout: 30000
-  
+            timeoutInMilliseconds: 5000
 ---
 
 spring:
@@ -228,9 +231,11 @@ spring:
 
 server:
   port: 7081
-  tomcat:
-    uri-encoding: UTF-8
-    max-http-post-size: 102400
+  maxHttpHeaderSize: 102400
+  tomcat.uri-encoding: UTF-8
+#  tomcat:
+#    uri-encoding: UTF-8
+#    max-http-post-size: 102400
 
 eureka:
   client: #客户端注册进eureka服务列表内
@@ -346,6 +351,106 @@ eureka:
 info:
    app.name: versioncloud-search-admin7082-test-02
    company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000
+---
+spring:
+  profiles: test04
+  application:
+    name:  versioncloud-search-admin
+  elasticsearch:
+    jest:
+      uris:
+      - http://192.168.31.60:9200
+      read-timeout: 5000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    url: jdbc:mysql://192.168.31.150:3306/lian2345 # 数据库名称
+    username: root
+    password: DaikuanTest888..
+    dbcp2:
+      driver-class-name: org.gjt.mm.mysql.Driver
+#      dbcp2:
+#        min-idle: 5                                           # 数据库连接池的最小维持连接数
+#        initial-size: 5                                       # 初始化连接数
+#        max-total: 5                                          # 最大连接数
+#        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+server:
+  port: 7081
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-post-size: 102400
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
+  instance:
+    instance-id: versioncloud-search-admin7082-test04
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-search-admin7082-test04
+   company.name: www.kpl.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+hystrix:    
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 5000
+---
+spring:
+  profiles: test1122
+  application:
+    name:  versioncloud-search-admin
+  elasticsearch:
+    jest:
+      uris:
+      - http://161.117.6.125:9200
+      read-timeout: 5000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    url: jdbc:mysql://161.117.6.125:3308/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    username: kplwoaini
+    password: 123456
+    dbcp2:
+      driver-class-name: org.gjt.mm.mysql.Driver
+#      dbcp2:
+#        min-idle: 5                                           # 数据库连接池的最小维持连接数
+#        initial-size: 5                                       # 初始化连接数
+#        max-total: 5                                          # 最大连接数
+#        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+server:
+  port: 7081
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-post-size: 102400
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+  instance:
+    instance-id: versioncloud-search-admin7082-test1122
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-search-admin7082-test1122
+   company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
 hystrix:    

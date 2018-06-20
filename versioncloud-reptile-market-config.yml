@@ -97,16 +97,21 @@ info:
    company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
-hystrix:    
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
   command:    
     default:    
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 10000
-ribbon:  
-  ReadTimeout: 10000  
-  ConnectTimeout: 10000
+            timeoutInMilliseconds: 20000 
+ribbon:
+  IsSecured: true
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
 ---
 server:
   port: 5556

@@ -46,7 +46,7 @@ spring:
  #jpa配置
   jpa:
      database: mysql
-     show-sql: false
+     show-sql: true
      generate-ddl: true
      hibernate:
        ddl-auto: update
@@ -71,29 +71,25 @@ server:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
-    healthcheck:
-      enabled: true
+      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
-    instance-id: versioncloud-other-mis-5658
+    instance-id: versioncloud-other-mis-5658-dev
     prefer-ip-address: true     #访问路径可以显示IP地址  
     
     
 info:
-   app.name: versioncloud-other-mis-5658
+   app.name: versioncloud-other-mis-5658-dev
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
+   
 hystrix:    
   command:    
     default:    
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 30000
-ribbon:  
-  ReadTimeout: 30000  
-  ConnectTimeout: 30000
+            timeoutInMilliseconds: 5000 
 ---
 spring:
   profiles: devkpl
@@ -644,9 +640,9 @@ spring:
   datasource:
        type: com.alibaba.druid.pool.DruidDataSource
        driver-class-name: com.mysql.jdbc.Driver
-       url: jdbc:mysql://161.117.6.125:3309/lian2345?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
-       username: root
-       password: DaikuanTest888..
+       url: jdbc:mysql://161.117.6.125:3308/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+       username: kplwoaini
+       password: 123456
      # 配置初始化大小、最小、最大
        initialSize: 5
        minIdle: 5
@@ -669,7 +665,7 @@ spring:
  #jpa配置
   jpa:
      database: mysql
-     show-sql: false
+     show-sql: true
      generate-ddl: true
      hibernate:
        ddl-auto: update
@@ -694,26 +690,22 @@ server:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
-    healthcheck:
-      enabled: true
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
   instance:
-    instance-id: versioncloud-other-mis-5658-test1122
+    instance-id: versioncloud-other-mis-5658-test-02
     prefer-ip-address: true     #访问路径可以显示IP地址  
     
     
 info:
-   app.name: versioncloud-other-mis-5658-test1122
-   company.name: www.lian2345.com
+   app.name: versioncloud-other-mis-5658-test-02
+   company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
+   
 hystrix:    
   command:    
     default:    
       execution:    
         isolation:    
           thread:    
-            timeoutInMilliseconds: 30000
-ribbon:  
-  ReadTimeout: 30000  
-  ConnectTimeout: 30000
+            timeoutInMilliseconds: 5000 
