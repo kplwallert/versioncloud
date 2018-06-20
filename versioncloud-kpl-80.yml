@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -10,14 +10,14 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
     healthcheck:
       enabled: true
   instance:
     instance-id: versioncloud-kpl-80
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -41,12 +41,12 @@ hystrix:
             timeoutInMilliseconds: 30000 
 ribbon:
   okhttp:
-    enabled: true #¿ªÆôÖØÊÔ»úÖÆ£¬ËüÄ¬ÈÏÊÇ¹Ø±Õ
-  ConnectTimeout: 30000  #ÇëÇóÁ¬½ÓµÄ³¬Ê±Ê±¼ä
-  ReadTimeout: 30000  #ÇëÇó´¦ÀíµÄ³¬Ê±Ê±¼ä
-  maxAutoRetries: 1 #¶Ôµ±Ç°ÊµÀıµÄÖØÊÔ´ÎÊı
-  maxAutoRetriesNextServer: 2  #ÇĞ»»ÊµÀıµÄÖØÊÔ´ÎÊı£¬½¨ÒéÉèÖÃÎªµ±Ç°·şÎñµÄÊµÀıÊı¡£µ«²»½¨ÒéÉèÖÃÌ«´ó
-  okToRetryOnAllOperations: true #¶ÔËùÓĞ²Ù×÷ÇëÇó¶¼½øĞĞÖØÊÔ
+    enabled: true #å¼€å¯é‡è¯•æœºåˆ¶ï¼Œå®ƒé»˜è®¤æ˜¯å…³é—­
+  ConnectTimeout: 30000  #è¯·æ±‚è¿æ¥çš„è¶…æ—¶æ—¶é—´
+  ReadTimeout: 30000  #è¯·æ±‚å¤„ç†çš„è¶…æ—¶æ—¶é—´
+  maxAutoRetries: 1 #å¯¹å½“å‰å®ä¾‹çš„é‡è¯•æ¬¡æ•°
+  maxAutoRetriesNextServer: 2  #åˆ‡æ¢å®ä¾‹çš„é‡è¯•æ¬¡æ•°ï¼Œå»ºè®®è®¾ç½®ä¸ºå½“å‰æœåŠ¡çš„å®ä¾‹æ•°ã€‚ä½†ä¸å»ºè®®è®¾ç½®å¤ªå¤§
+  okToRetryOnAllOperations: true #å¯¹æ‰€æœ‰æ“ä½œè¯·æ±‚éƒ½è¿›è¡Œé‡è¯•
   IsSecured: true
 ---
 server:
@@ -57,12 +57,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
   instance:
     instance-id: versioncloud-kpl-80-11
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -86,12 +86,12 @@ hystrix:
             timeoutInMilliseconds: 30000 
 ribbon:
   okhttp:
-    enabled: true #¿ªÆôÖØÊÔ»úÖÆ£¬ËüÄ¬ÈÏÊÇ¹Ø±Õ
-  ConnectTimeout: 30000  #ÇëÇóÁ¬½ÓµÄ³¬Ê±Ê±¼ä
-  ReadTimeout: 30000  #ÇëÇó´¦ÀíµÄ³¬Ê±Ê±¼ä
-  maxAutoRetries: 1 #¶Ôµ±Ç°ÊµÀıµÄÖØÊÔ´ÎÊı
-  maxAutoRetriesNextServer: 2  #ÇĞ»»ÊµÀıµÄÖØÊÔ´ÎÊı£¬½¨ÒéÉèÖÃÎªµ±Ç°·şÎñµÄÊµÀıÊı¡£µ«²»½¨ÒéÉèÖÃÌ«´ó
-  okToRetryOnAllOperations: true #¶ÔËùÓĞ²Ù×÷ÇëÇó¶¼½øĞĞÖØÊÔ
+    enabled: true #å¼€å¯é‡è¯•æœºåˆ¶ï¼Œå®ƒé»˜è®¤æ˜¯å…³é—­
+  ConnectTimeout: 30000  #è¯·æ±‚è¿æ¥çš„è¶…æ—¶æ—¶é—´
+  ReadTimeout: 30000  #è¯·æ±‚å¤„ç†çš„è¶…æ—¶æ—¶é—´
+  maxAutoRetries: 1 #å¯¹å½“å‰å®ä¾‹çš„é‡è¯•æ¬¡æ•°
+  maxAutoRetriesNextServer: 2  #åˆ‡æ¢å®ä¾‹çš„é‡è¯•æ¬¡æ•°ï¼Œå»ºè®®è®¾ç½®ä¸ºå½“å‰æœåŠ¡çš„å®ä¾‹æ•°ã€‚ä½†ä¸å»ºè®®è®¾ç½®å¤ªå¤§
+  okToRetryOnAllOperations: true #å¯¹æ‰€æœ‰æ“ä½œè¯·æ±‚éƒ½è¿›è¡Œé‡è¯•
   IsSecured: true
 ---
 server:
@@ -102,12 +102,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-81
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -138,12 +138,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -176,12 +176,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-01
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -216,12 +216,12 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-test-02
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -254,14 +254,14 @@ spring:
   application:
     name:  versioncloud-kpl-80
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
     healthcheck:
       enabled: true
   instance:
     instance-id: versioncloud-kpl-80-test1122
-    prefer-ip-address: true     #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾IPµØÖ·  
+    prefer-ip-address: true     #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºIPåœ°å€  
     
     
 info:
@@ -289,10 +289,10 @@ hystrix:
             timeoutInMilliseconds: 30000 
 ribbon:
   okhttp:
-    enabled: true #¿ªÆôÖØÊÔ»úÖÆ£¬ËüÄ¬ÈÏÊÇ¹Ø±Õ
-  ConnectTimeout: 30000  #ÇëÇóÁ¬½ÓµÄ³¬Ê±Ê±¼ä
-  ReadTimeout: 30000  #ÇëÇó´¦ÀíµÄ³¬Ê±Ê±¼ä
-  maxAutoRetries: 1 #¶Ôµ±Ç°ÊµÀıµÄÖØÊÔ´ÎÊı
-  maxAutoRetriesNextServer: 2  #ÇĞ»»ÊµÀıµÄÖØÊÔ´ÎÊı£¬½¨ÒéÉèÖÃÎªµ±Ç°·şÎñµÄÊµÀıÊı¡£µ«²»½¨ÒéÉèÖÃÌ«´ó
-  okToRetryOnAllOperations: true #¶ÔËùÓĞ²Ù×÷ÇëÇó¶¼½øĞĞÖØÊÔ
+    enabled: true #å¼€å¯é‡è¯•æœºåˆ¶ï¼Œå®ƒé»˜è®¤æ˜¯å…³é—­
+  ConnectTimeout: 30000  #è¯·æ±‚è¿æ¥çš„è¶…æ—¶æ—¶é—´
+  ReadTimeout: 30000  #è¯·æ±‚å¤„ç†çš„è¶…æ—¶æ—¶é—´
+  maxAutoRetries: 1 #å¯¹å½“å‰å®ä¾‹çš„é‡è¯•æ¬¡æ•°
+  maxAutoRetriesNextServer: 2  #åˆ‡æ¢å®ä¾‹çš„é‡è¯•æ¬¡æ•°ï¼Œå»ºè®®è®¾ç½®ä¸ºå½“å‰æœåŠ¡çš„å®ä¾‹æ•°ã€‚ä½†ä¸å»ºè®®è®¾ç½®å¤ªå¤§
+  okToRetryOnAllOperations: true #å¯¹æ‰€æœ‰æ“ä½œè¯·æ±‚éƒ½è¿›è¡Œé‡è¯•
   IsSecured: true
