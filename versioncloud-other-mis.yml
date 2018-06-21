@@ -675,7 +675,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://www.blockgdex.com:27017
+      uri: mongodb://172.18.0.112:27017
 
 
 #          host: 192.168.31.166

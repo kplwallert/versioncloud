@@ -418,7 +418,7 @@ spring:
   elasticsearch:
     jest:
       uris:
-      - http://www.blockgdex.com:9200
+      - http://172.18.0.111:9200
       read-timeout: 5000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
