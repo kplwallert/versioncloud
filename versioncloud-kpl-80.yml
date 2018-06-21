@@ -74,10 +74,10 @@ zuul:
   routes:
     market.serviceId: versioncloud-kpl
     market.path: /market/api/**
-    mis.serviceId: versioncloud-other-mis
-    mis.path: /**
-    search.serviceId: versioncloud-search-admin
-    search.path: /**
+    #mis.serviceId: versioncloud-other-mis
+    #mis.path: /**
+    #search.serviceId: versioncloud-search-admin
+    #search.path: /**
  
 hystrix:
   threadpool:
@@ -276,10 +276,6 @@ info:
    build.artifactId: $project.artifactId$
    build.version: $project.version$
    
-market:
-  ribbon:
-    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    listOfServers: http://39.108.159.21:5556,http://192.168.31.158:5557
 zuul:
   ignored-services: "*"
   routes:
