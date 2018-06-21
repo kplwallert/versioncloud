@@ -4,7 +4,7 @@
     - dev
 ---
 spring:
-  profiles: dev
+  profiles: devdev
   application:
       name:  versioncloud-other-mis
   freemarker:
@@ -623,7 +623,7 @@ hystrix:
             timeoutInMilliseconds: 5000 
 ---
 spring:
-  profiles: test1122
+  profiles: dev
   application:
       name:  versioncloud-other-mis
   freemarker:
