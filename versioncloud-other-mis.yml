@@ -640,7 +640,7 @@ spring:
   datasource:
        type: com.alibaba.druid.pool.DruidDataSource
        driver-class-name: com.mysql.jdbc.Driver
-       url: jdbc:mysql://161.117.6.125:3308/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+       url: jdbc:mysql://172.18.0.120:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
        username: kplwoaini
        password: 123456
      # 配置初始化大小、最小、最大
@@ -675,7 +675,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://161.117.6.125:27017
+      uri: mongodb://www.blockgdex.com:27017
 
 
 #          host: 192.168.31.166

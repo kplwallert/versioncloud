@@ -418,11 +418,11 @@ spring:
   elasticsearch:
     jest:
       uris:
-      - http://161.117.6.125:9200
+      - http://www.blockgdex.com:9200
       read-timeout: 5000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    url: jdbc:mysql://161.117.6.125:3308/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    url: jdbc:mysql://172.18.0.120:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
     username: kplwoaini
     password: 123456
     dbcp2:
