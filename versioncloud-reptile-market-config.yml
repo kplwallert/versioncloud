@@ -368,8 +368,8 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
     url: jdbc:mysql://172.18.0.120:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
-    username: kplwoaini
-    password: 123456
+    username: root
+    password: DaikuanTest888..
     dbcp2:
       min-idle: 50                                           # 数据库连接池的最小维持连接数
       initial-size: 50                                       # 初始化连接数
@@ -390,13 +390,13 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    ip-address: 39.108.159.21
-    instance-id: versioncloud-reptile-market-config-5556-test1122
+    #ip-address: 39.108.159.21
+    instance-id: versioncloud-reptile-market-config-5556-test11221
     prefer-ip-address: true     #访问路径可以显示IP地址  
     
     
 info:
-   app.name: versioncloud-provieder-reptile-5556-test1122
+   app.name: versioncloud-provieder-reptile-5556-test11221
    company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
