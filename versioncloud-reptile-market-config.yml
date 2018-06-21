@@ -390,7 +390,7 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    #ip-address: 39.108.159.21
+    ip-address: 47.75.146.74
     instance-id: versioncloud-reptile-market-config-5556-test11221
     prefer-ip-address: true     #访问路径可以显示IP地址  
     
