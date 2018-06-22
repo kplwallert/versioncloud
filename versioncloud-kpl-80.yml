@@ -69,11 +69,11 @@ info:
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
-zuul:
-  ignored-services: "*"
-  routes:
-    market.serviceId: versioncloud-kpl
-    market.path: /market/api/**
+#zuul:
+  #ignored-services: "*"
+  #routes:
+    #market.serviceId: versioncloud-kpl
+    #market.path: /market/api/**
     #mis.serviceId: versioncloud-other-mis
     #mis.path: /**
     #search.serviceId: versioncloud-search-admin
