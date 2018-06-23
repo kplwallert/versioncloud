@@ -623,7 +623,7 @@ hystrix:
             timeoutInMilliseconds: 5000 
 ---
 spring:
-  profiles: dev
+  profiles: test1122
   application:
       name:  versioncloud-other-mis
   freemarker:
@@ -665,7 +665,7 @@ spring:
  #jpa配置
   jpa:
      database: mysql
-     show-sql: true
+     show-sql: false
      generate-ddl: true
      hibernate:
        ddl-auto: update
@@ -698,7 +698,7 @@ eureka:
     
 info:
    app.name: versioncloud-other-mis-5658-test-02
-   company.name: www.kpl.com
+   company.name: www.lian2345.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
    

@@ -412,7 +412,7 @@ hystrix:
             timeoutInMilliseconds: 5000
 ---
 spring:
-  profiles: dev
+  profiles: test1122
   application:
     name:  versioncloud-search-admin
   elasticsearch:

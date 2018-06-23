@@ -92,3 +92,25 @@ info:
    company.name: www.kpl.com
    build.artifactId: $project.artifactId$
    build.version: $project.version$
+---
+server:
+  port: 9001
+
+spring:
+  profiles: test1122
+  application:
+    name: versioncloud-hystrix-dashbroad
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+  instance:
+    instance-id: versioncloud-hystrix-dashbroad-9001-test1122
+    prefer-ip-address: true     #访问路径可127.0.0.1121212以显示IP地址
+ 
+info:
+   app.name: versioncloud-hystrix-dashbroad-9001-test1122
+   company.name: www.lian2345.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$

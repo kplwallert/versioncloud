@@ -35,7 +35,7 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    ip-address: 192.168.31.158
+    #ip-address: 192.168.31.158
     instance-id: versioncloud-reptile-market-config-dev-5556
     prefer-ip-address: true     #访问路径可以显示IP地址  
 info:
