@@ -474,3 +474,121 @@ ribbon:
      IsSecured: true
      ReadTimeout: 20000
      ConnectTimeout: 20000
+---
+server:
+  port: 5556
+
+spring:
+  profiles: test1133
+  application:
+    name:  versioncloud-kpl
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://127.0.0.1:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    username: maxhom
+    password: maxhom168!
+    dbcp2:
+      min-idle: 50                                           # 数据库连接池的最小维持连接数
+      initial-size: 50                                       # 初始化连接数
+      max-total: 500                                          # 最大连接数
+      max-wait-millis: 2000000                                 # 等待连接获取的最大超时时间
+  jpa:
+    hibernate:
+#     更新或者创建数据表结构
+      ddl-auto: update
+#    控制台显示SQL
+    show-sql: false
+    #数据在5.7以上会报错
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    #ip-address: 47.75.146.74
+    instance-id: versioncloud-reptile-market-config-5556-test11221
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-provieder-reptile-5556-test11221
+   company.name: www.lian2345.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 20000 
+ribbon:
+     IsSecured: true
+     ReadTimeout: 20000
+     ConnectTimeout: 20000
+---
+server:
+  port: 7081
+
+spring:
+  profiles: test1144
+  application:
+    name:  versioncloud-kpl
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://127.0.0.1:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    username: maxhom
+    password: maxhom168!
+    dbcp2:
+      min-idle: 50                                           # 数据库连接池的最小维持连接数
+      initial-size: 50                                       # 初始化连接数
+      max-total: 500                                          # 最大连接数
+      max-wait-millis: 2000000                                 # 等待连接获取的最大超时时间
+  jpa:
+    hibernate:
+#     更新或者创建数据表结构
+      ddl-auto: update
+#    控制台显示SQL
+    show-sql: false
+    #数据在5.7以上会报错
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    #ip-address: 47.75.146.74
+    instance-id: versioncloud-reptile-market-config-5556-test11221
+    prefer-ip-address: true     #访问路径可以显示IP地址  
+    
+    
+info:
+   app.name: versioncloud-provieder-reptile-5556-test11221
+   company.name: www.lian2345.com
+   build.artifactId: $project.artifactId$
+   build.version: $project.version$
+hystrix:
+  threadpool:
+    default:
+      coreSize: 200
+      maximumSize: 200
+  command:    
+    default:    
+      execution:    
+        isolation:    
+          thread:    
+            timeoutInMilliseconds: 20000 
+ribbon:
+     IsSecured: true
+     ReadTimeout: 20000
+     ConnectTimeout: 20000
