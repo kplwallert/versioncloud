@@ -12,7 +12,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/
     healthcheck:
       enabled: true
   instance:
@@ -58,7 +58,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/,http://www.blockgdex.com:7001/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/
   instance:
     instance-id: versioncloud-kpl-80-11
     prefer-ip-address: true     #访问路径可以显示IP地址  
@@ -262,7 +262,7 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://www.blockgdex.com:7001/eureka/,http://www.lian2345.com:7002/eureka/
+      defaultZone: http://www.lian2345.com:7002/eureka/
     healthcheck:
       enabled: true
   instance:
