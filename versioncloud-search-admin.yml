@@ -418,13 +418,13 @@ spring:
   elasticsearch:
     jest:
       uris:
-      - http://127.0.0.1:9200
+      - http://47.75.146.74:9200
       read-timeout: 5000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    url: jdbc:mysql://127.0.0.1:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
-    username: root
-    password: DaikuanTest888..
+    url: jdbc:mysql://47.75.146.74:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    username: kplwoaini
+    password: Kpl123456..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
@@ -436,7 +436,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://127.0.0.1:27017
+      uri: mongodb://47.75.146.74:27017
 
 server:
   port: 7081
