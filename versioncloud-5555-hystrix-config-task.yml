@@ -113,20 +113,6 @@ spring:
     show-sql: false
     #数据在5.7以上会报错
     database-platform: org.hibernate.dialect.MySQL5Dialect
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
-  instance:
-    instance-id: versioncloud-5555-hystrix-config-task-5554
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-provieder-task
-   company.name: www.kpl.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
 ---
 server:
   port: 5555
@@ -154,20 +140,6 @@ spring:
     show-sql: false
     #数据在5.7以上会报错
     database-platform: org.hibernate.dialect.MySQL5Dialect
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://192.168.31.200:7001/eureka/,http://192.168.31.200:7002/eureka/
-  instance:
-    instance-id: versioncloud-5555-hystrix-config-task-5555-test
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-provieder-task-test
-   company.name: www.kpl.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
 ---
 server:
   port: 5555
@@ -239,19 +211,3 @@ spring:
     show-sql: false
     #数据在5.7以上会报错
     database-platform: org.hibernate.dialect.MySQL5Dialect
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/
-    healthcheck:
-      enabled: true
-  instance:
-    instance-id: versioncloud-5555-hystrix-config-task-5555-test1122
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-provieder-task-test1122
-   company.name: www.lian2345.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
