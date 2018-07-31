@@ -443,25 +443,3 @@ server:
   tomcat:
     uri-encoding: UTF-8
     max-http-post-size: 102400
-
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/
-  instance:
-    instance-id: versioncloud-search-admin7082-test1122
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-search-admin7082-test1122
-   company.name: www.lian2345.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
-hystrix:    
-  command:    
-    default:    
-      execution:    
-        isolation:    
-          thread:    
-            timeoutInMilliseconds: 5000

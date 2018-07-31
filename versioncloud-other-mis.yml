@@ -686,32 +686,7 @@ server:
     port: 5658
     maxHttpHeaderSize: 102400
     tomcat.uri-encoding: UTF-8
-
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/
-  instance:
-    instance-id: versioncloud-other-mis-5658-test-02
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-other-mis-5658-test-02
-   company.name: www.lian2345.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
-   
-hystrix:    
-  command:    
-    default:    
-      execution:    
-        isolation:    
-          thread:    
-            timeoutInMilliseconds: 5000 
-            
-            
-            
+           
 ---
 spring:
   profiles: test726
@@ -733,7 +708,7 @@ spring:
        driver-class-name: com.mysql.jdbc.Driver
        url: jdbc:mysql://47.74.153.82:3306/lian2345?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
        username: kplwoaini
-       password: Kpl123456..
+       password: Kpl123456.
      # 配置初始化大小、最小、最大
        initialSize: 5
        minIdle: 5
@@ -778,26 +753,4 @@ server:
     maxHttpHeaderSize: 102400
     tomcat.uri-encoding: UTF-8
 
-eureka:
-  client: #客户端注册进eureka服务列表内
-    service-url:
-      defaultZone: http://www.lian2345.com:7002/eureka/
-  instance:
-    instance-id: versioncloud-other-mis-5658-test-02
-    prefer-ip-address: true     #访问路径可以显示IP地址  
-    
-    
-info:
-   app.name: versioncloud-other-mis-5658-test-02
-   company.name: www.lian2345.com
-   build.artifactId: $project.artifactId$
-   build.version: $project.version$
-   
-hystrix:    
-  command:    
-    default:    
-      execution:    
-        isolation:    
-          thread:    
-            timeoutInMilliseconds: 5000 
 
