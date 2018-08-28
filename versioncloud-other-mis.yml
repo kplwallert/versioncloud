@@ -735,15 +735,8 @@ spring:
      generate-ddl: true
      hibernate:
        ddl-auto: update
-
-
 #mongo配置
   data:
     mongodb:
       database: zhanqun01
       uri: mongodb://47.75.146.74:27017
-
-
-#          host: 192.168.31.166
-#          port: 27017
-#          database: kpl_test2
