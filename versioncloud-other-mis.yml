@@ -740,3 +740,7 @@ spring:
     mongodb:
       database: zhanqun01
       uri: mongodb://47.75.146.74:27017
+server:
+    port: 5658
+    maxHttpHeaderSize: 102400
+    tomcat.uri-encoding: UTF-8
