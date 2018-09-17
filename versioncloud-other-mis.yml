@@ -738,7 +738,7 @@ spring:
 #mongo配置
   data:
     mongodb:
-      database: zhanqun01
+      database: 8bitcash
       uri: mongodb://47.75.146.74:27017
 server:
     port: 5658
