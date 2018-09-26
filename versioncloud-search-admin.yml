@@ -229,7 +229,7 @@ spring:
       uri: mongodb://47.75.146.74:27017
 
 server:
-  port: 5662
+  port: 7086
   tomcat:
     uri-encoding: UTF-8
     max-http-post-size: 102400
