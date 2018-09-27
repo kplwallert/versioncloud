@@ -268,3 +268,36 @@ server:
     uri-encoding: UTF-8
     max-http-post-size: 102400
 ---
+spring:
+  profiles: benditest
+  application:
+    name:  versioncloud-search-admin
+  elasticsearch:
+    jest:
+      uris:
+      - http://161.117.6.125:9200
+      read-timeout: 5000
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    url: jdbc:mysql://192.168.1.115:3306/bit002?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true      # 数据库名称
+    username: root
+    password: DaikuanTest888..
+    dbcp2:
+      driver-class-name: org.gjt.mm.mysql.Driver
+#      dbcp2:
+#        min-idle: 5                                           # 数据库连接池的最小维持连接数
+#        initial-size: 5                                       # 初始化连接数
+#        max-total: 5                                          # 最大连接数
+#        max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+#mongo配置
+  data:
+    mongodb:
+      database: 8bitcash
+      uri: mongodb://161.117.6.125:27018
+
+server:
+  port: 7088
+  tomcat:
+    uri-encoding: UTF-8
+    max-http-post-size: 102400
+---
