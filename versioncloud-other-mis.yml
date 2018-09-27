@@ -748,7 +748,7 @@ spring:
 #          database: kpl_test2
 
 server:
-    port: 5658
+    port: 5659
     maxHttpHeaderSize: 102400
     tomcat.uri-encoding: UTF-8
             
