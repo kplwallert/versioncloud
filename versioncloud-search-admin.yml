@@ -28,7 +28,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://161.117.6.125:27017
+      uri: mongodb://161.117.6.125:27018
 
 server:
   port: 7081
