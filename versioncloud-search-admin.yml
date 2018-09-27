@@ -47,9 +47,9 @@ spring:
       read-timeout: 5000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    url: jdbc:mysql://127.0.0.1:3306/lian2345_ling?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
+    url: jdbc:mysql://161.117.6.125:3306/lian2345_ling?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
     username: root
-    password: root
+    password: DaikuanTest888..
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
