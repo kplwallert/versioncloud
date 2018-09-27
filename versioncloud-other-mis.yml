@@ -739,7 +739,7 @@ spring:
   data:
     mongodb:
       database: 8bitcash
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5658
     maxHttpHeaderSize: 102400
@@ -796,7 +796,7 @@ spring:
   data:
     mongodb:
       database: 8bittoken
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5659
     maxHttpHeaderSize: 102400
@@ -853,7 +853,7 @@ spring:
   data:
     mongodb:
       database: bit001
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5660
     maxHttpHeaderSize: 102400
@@ -910,7 +910,7 @@ spring:
   data:
     mongodb:
       database: bitball
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5661
     maxHttpHeaderSize: 102400
@@ -967,7 +967,7 @@ spring:
   data:
     mongodb:
       database: 8bitcash
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5658
     maxHttpHeaderSize: 102400
@@ -1024,7 +1024,7 @@ spring:
   data:
     mongodb:
       database: bit002
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27018
 server:
     port: 5662
     maxHttpHeaderSize: 102400
