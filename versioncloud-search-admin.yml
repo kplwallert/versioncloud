@@ -10,7 +10,7 @@ spring:
   elasticsearch:
     jest:
       uris:
-      - http://47.75.146.74:9200
+      - http://161.117.6.125:9200
       read-timeout: 5000
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
@@ -28,7 +28,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://47.75.146.74:27017
+      uri: mongodb://161.117.6.125:27017
 
 server:
   port: 7081
