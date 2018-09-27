@@ -293,7 +293,7 @@ spring:
   data:
     mongodb:
       database: 8bitcash
-      uri: mongodb://161.117.6.125:27018
+      uri: mongodb://192.168.1.66:27017
 
 server:
   port: 7088
