@@ -49,7 +49,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     url: jdbc:mysql://127.0.0.1:3306/lian2345_ling?useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=100      # 数据库名称
     username: root
-    password: DaikuanTest888..
+    password: root
     dbcp2:
       driver-class-name: org.gjt.mm.mysql.Driver
 #      dbcp2:
