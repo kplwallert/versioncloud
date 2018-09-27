@@ -674,7 +674,7 @@ spring:
 #mongo配置
   data:
     mongodb:
-      database: lian2345
+      database: lian2345_beifen_9-27
       uri: mongodb://161.117.6.125:27018
 
 
