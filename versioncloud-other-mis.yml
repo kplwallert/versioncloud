@@ -1148,7 +1148,7 @@ spring:
 #mongo配置
   data:
     mongodb:
-      database: lian2345
+      database: 8bitcash
       uri: mongodb://192.168.1.66:27017
 
 
