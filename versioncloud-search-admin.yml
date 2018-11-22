@@ -325,7 +325,7 @@ spring:
 #mongo配置
   data:
     mongodb:
-      database: bit002
+      database: lian2345
       uri: mongodb://161.117.6.125:27018
 
 server:
