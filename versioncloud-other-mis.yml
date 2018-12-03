@@ -1213,7 +1213,7 @@ spring:
   data:
     mongodb:
       database: lian2345
-      uri: mongodb://161.117.6.125:27018
+      uri: mongodb://127.0.0.1:27017
 server:
     port: 5899
     maxHttpHeaderSize: 102400
